@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtchaJohn — APP Series Gallery 1</title>
+    <style>
+        body { 
+            background: #1A1A1A; 
+            color: #F0F0F0; 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
+        h1 { 
+            font-size: 2.8em; 
+            margin-bottom: 40px; 
+        }
+        .thumbnails {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .thumbnail {
+            text-decoration: none;
+            color: inherit;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #444;
+            transition: transform 0.3s;
+        }
+        .thumbnail:hover img {
+            transform: scale(1.03);
+        }
+        .thumbnail p {
+            margin-top: 12px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>APP Series — Gallery 1</h1>
+
+    <div class="thumbnails">
+        <!-- We will add the 20 thumbnails here shortly -->
+    </div>
+
+    <p style="margin-top: 60px;">
+        <a href="index.html" style="color: #aaa; text-decoration: none;">← Back to Home</a>
+    </p>
+
+</body>
+</html>
