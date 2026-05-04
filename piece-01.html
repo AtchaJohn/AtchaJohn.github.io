@@ -13,6 +13,41 @@
         img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
         figcaption { font-style: italic; color: #aaa; font-size: 1.2em; margin-top: 20px; }
         .signature { margin-top: 60px; font-size: 1em; color: #aaa; }
+
+/* APP Series Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1A1A1A;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
+    z-index: 10;
+    text-align: left;
+    margin-top: 8px;
+    border: 1px solid #444;
+}
+
+.dropdown-content a {
+    color: #F0F0F0;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+        
     </style>
 </head>
 <body>
@@ -23,7 +58,7 @@
     <a href="index.html">Home</a>
     
     <div class="dropdown">
-        <a href="#" style="color: #B22222;">APP Series ▼</a>
+      <a href="#" style="color: #B22222;" onclick="toggleDropdown()">APP Series ▼</a>
         <div class="dropdown-content">
             <a href="gallery-1.html">Gallery / Overview</a>
             <a href="piece-01.html">APP1</a>
@@ -61,6 +96,12 @@
     <div class="signature">
         AtchaJohn — 04 December 2025
     </div>
+
+    <script>
+function toggleDropdown() {
+    document.getElementById("dropdownContent").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
