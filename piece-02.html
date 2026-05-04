@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtchaJohn — Title APP2</title>
+    <title>AtchaJohn — Title APP1=2</title>
     <style>
         body { background: black; color: white; font-family: Arial, sans-serif; margin: 0; padding: 20px; text-align: center; }
         header { padding: 20px 0; border-bottom: 1px solid #444; }
@@ -13,6 +13,41 @@
         img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
         figcaption { font-style: italic; color: #aaa; font-size: 1.2em; margin-top: 20px; }
         .signature { margin-top: 60px; font-size: 1em; color: #aaa; }
+
+/* APP Series Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1A1A1A;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
+    z-index: 10;
+    text-align: left;
+    margin-top: 8px;
+    border: 1px solid #444;
+}
+
+.dropdown-content a {
+    color: #F0F0F0;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+        
     </style>
 </head>
 <body>
@@ -52,15 +87,21 @@
     </header>
 
     <figure>
-        <img src="./Compress APP1-5 Fin/APP2.png" alt="APP2 artwork">
-        <figcaption>
-            APP2 Title — Tryptic Maquette
-        </figcaption>
+       <img src="./Compress APP1-5 Fin/APP2.png" alt="APP2 artwork">
+<figcaption>
+    APP2 Title — Tryptic Maquette
+</figcaption>
     </figure>
 
     <div class="signature">
         AtchaJohn — 11 November 2025
     </div>
+
+    <script>
+function toggleDropdown() {
+    document.getElementById("dropdownContent").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
