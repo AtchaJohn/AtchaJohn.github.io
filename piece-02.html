@@ -71,6 +71,75 @@
         .dropdown-content.show {
             display: block;
         }
+
+/* Improved Header & Menu Styling */
+header {
+    padding: 25px 0;
+    border-bottom: 1px solid #555;
+}
+
+h1 {
+    margin: 0 0 15px 0;
+    font-size: 2.8em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ddd;
+    margin: 0 18px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Dropdown specific */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown > a {
+    color: #ff3333 !important;   /* Stronger red for APP Series */
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 240px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    z-index: 10;
+    text-align: left;
+    margin-top: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: #ddd;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: white;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+        
     </style>
 </head>
 <body>
