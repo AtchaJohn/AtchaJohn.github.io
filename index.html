@@ -73,7 +73,10 @@
     text-align: left;
     margin-top: 8px;
     border: 1px solid #444;
-    padding: 8px 0;
+}
+
+.dropdown-content.show {
+    display: block;
 }
 
 .dropdown-content a {
@@ -81,18 +84,11 @@
     padding: 12px 20px;
     text-decoration: none;
     display: block;
-    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
     background-color: #333;
 }
-
-/* Improved hover behaviour */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-        
     </style>
 </head>
 <body>
@@ -107,8 +103,8 @@
     <a href="index.html">Home</a>
     
     <div class="dropdown">
-        <a href="#" style="color: #B22222; margin-left: 40px;">APP Series ▼</a>
-        <div class="dropdown-content">
+        <a href="#" class="dropbtn" onclick="toggleDropdown()">APP Series ▼</a>
+        <div id="dropdownContent" class="dropdown-content">
             <a href="gallery-1.html">Gallery / Overview</a>
             <a href="piece-01.html">APP1</a>
             <a href="piece-02.html">APP2</a>
@@ -120,21 +116,11 @@
             <a href="piece-08.html">APP8</a>
             <a href="piece-09.html">APP9</a>
             <a href="piece-10.html">APP10</a>
-            <a href="piece-11.html">APP11</a>
-            <a href="piece-12.html">APP12</a>
-            <a href="piece-13.html">APP13</a>
-            <a href="piece-14.html">APP14</a>
-            <a href="piece-15.html">APP15</a>
-            <a href="piece-16.html">APP16</a>
-            <a href="piece-17.html">APP17</a>
-            <a href="piece-18.html">APP18</a>
-            <a href="piece-19.html">APP19</a>
-            <a href="piece-20.html">APP20</a>
-            
-            <!-- Add more as needed -->
+            <!-- Add more APP links here as needed -->
         </div>
     </div>
 </nav>
+        
     </header>
 
     <!-- Intro paragraph -->
@@ -157,5 +143,24 @@
         AtchaJohn — posted today being whenever that is ...
     </p>
 
+<script>
+function toggleDropdown() {
+    document.getElementById("dropdownContent").classList.toggle("show");
+}
+
+// Close dropdown if user clicks outside
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
+    
 </body>
 </html>
