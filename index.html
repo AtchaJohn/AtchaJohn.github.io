@@ -55,6 +55,38 @@
             font-size: 1em;
             color: #aaa;
             margin-top: 50px;
+        /* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1A1A1A;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.8);
+    z-index: 1;
+    text-align: left;
+    margin-top: 8px;
+    border: 1px solid #444;
+}
+
+.dropdown-content a {
+    color: #F0F0F0;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}            
         }
     </style>
 </head>
